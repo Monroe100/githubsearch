@@ -10,4 +10,7 @@
       </form>
     </div>
   </div>
+  <div *ngFor='let repo of repos'>
+    Repository: <p>{{repo.name}}</p>
+  </div>
 </div>
