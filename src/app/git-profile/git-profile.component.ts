@@ -7,25 +7,20 @@ import { Component, OnInit, Output,EventEmitter } from '@angular/core';
   styleUrls: ['./git-profile.component.css']
 })
 export class GitProfileComponent implements OnInit {
-  term:string
+  search:string
 
-  @Output() searchTerm = new EventEmitter<any>()
+  @Output() user = new EventEmitter<any>()
 
 searchProfile(){
-  console.log("Recieved: "+this.term);
-  this.searchTerm.emit(this.term);
-  this.term = '';
+  console.log("Recieved: "+this.search);
+  this.user.emit(this.search);
+  this.search = '';
   
 }
 
 constructor() { 
 }
   ngOnInit() {
-    // this.http.get(this.link).subscribe((res:any)=>{
-    //   this.repos=res
-    //   console.log("Data: " +this.repos);
-      
-    // });
   }
 
 }
