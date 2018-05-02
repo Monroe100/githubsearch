@@ -4,7 +4,7 @@
       <img src="assets/github-logo.png" height="90px">
     </div>
     <div class="col-md-4">
-       <form (ngSubmit)="searchProfile()">
+       <form (ngSubmit)="searchProfile()" class="form-inline">
         <label for="search">Enter Username to search</label>
         <input type="text" [(ngModel)]="search" name="user">
         <input type="submit" value="Search" class="glyphicon glyphicon-search">
