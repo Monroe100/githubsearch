@@ -5,6 +5,7 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { GitProfileComponent } from './git-profile/git-profile.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UsersService } from './users.service';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     FormsModule
 
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
