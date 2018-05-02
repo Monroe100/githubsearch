@@ -12,7 +12,7 @@ For the application to run on local machine, you must have NPM and Angular insta
 
 Known Bugs/Updates/Corrections
 ---
-<!-- currently there aren't any known bugs, but incase you find any you could reach out to me through my E-mail michelle1hunnid@gmail.com -->
+currently there aren't any known bugs, but incase you find any you could reach out to me through my E-mail michelle1hunnid@gmail.com
 
 # Gitsearch
 
