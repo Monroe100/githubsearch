@@ -4,13 +4,11 @@
       <img src="assets/github-logo.png" height="90px">
     </div>
     <div class="col-md-4">
-      <form>
-        <input type="text" placeholder="Search">
-        <button type="submit"><span class="glyphicon glyphicon-search"></span></button>
+       <form (ngSubmit)="searchProfile()">
+        <label for="search">Enter Username to search</label>
+        <input type="text" [(ngModel)]="search" name="user">
+        <input type="submit" value="Search" class="glyphicon glyphicon-search">
       </form>
     </div>
-  </div>
-  <div *ngFor='let repo of repos'>
-    Repository: <p>{{repo.name}}</p>
   </div>
 </div>

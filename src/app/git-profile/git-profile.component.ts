@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-git-profile',
@@ -7,15 +7,19 @@ import {HttpClient} from '@angular/common/http'
   styleUrls: ['./git-profile.component.css']
 })
 export class GitProfileComponent implements OnInit {
-// http:HttpClient
+  term:string
 
-repos=[];
+  @Output() searchTerm = new EventEmitter<any>()
 
+searchProfile(){
+  console.log("Recieved: "+this.term);
+  this.searchTerm.emit(this.term);
+  this.term = '';
+  
+}
 
-  constructor(private http:HttpClient) { 
-    this.http = http
-  }
-
+constructor() { 
+}
   ngOnInit() {
     // this.http.get(this.link).subscribe((res:any)=>{
     //   this.repos=res
