@@ -32,4 +32,13 @@ export class UsersService {
     return promise;
   }
 
+  repositories(sTerm){
+    interface Repos{
+      name:string;
+      html_url:any;
+      description:any;
+      updated_at:Date
+    }
+    let promise
+  }
 }
