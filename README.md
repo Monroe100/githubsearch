@@ -16,9 +16,7 @@ currently there aren't any known bugs, but incase you find any you could reach o
 
 The following are the required inputs:
 ----
-A Quote (Entered into the text area). The author of the Quote. Name of the user uploading the Quote. The date the Quote is submitted.(Hidden input).
-
-
+A user name
 # Gitsearch
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
