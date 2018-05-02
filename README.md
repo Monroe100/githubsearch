@@ -6,6 +6,10 @@ project Description
 ----
  website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories
 
+ Setup/Installation Requirements
+----
+<!-- For the application to run on local machine, you must have NPM and Angular installed. Bootstrap(4) is also required for the custom styling used and recommended especially for the cards element to work. When all the Requirements have been met, you can simply clone the application by running the command git clone https://github.com/Monroe100/projectquotes.git on your local machine and you can run your own version by opening a terminal and navigating to the cloned folder and running ng serve -o,this will initiate and open a server that will allow you to view the application. You can also access the generated application from this link or the one provided above if you first want to see how the application works. -->
+
 # Gitsearch
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
