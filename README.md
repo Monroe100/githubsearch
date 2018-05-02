@@ -16,7 +16,7 @@ currently there aren't any known bugs, but incase you find any you could reach o
 
 The following are the required inputs:
 ----
-<!-- A Quote (Entered into the text area). The author of the Quote. Name of the user uploading the Quote. The date the Quote is submitted.(Hidden input). -->
+A Quote (Entered into the text area). The author of the Quote. Name of the user uploading the Quote. The date the Quote is submitted.(Hidden input).
 
 
 # Gitsearch
