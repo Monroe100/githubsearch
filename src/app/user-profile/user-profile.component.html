@@ -1,4 +1,13 @@
-<app-git-profile (searchTerm)='SearchTerm($event)'></app-git-profile>
-<p>
-  user-profile works!
-</p>
+<app-git-profile (user)='SearchTerm($event)'></app-git-profile>
+<div class="container">
+  <div class="userInfo">
+    <img src="{{userProfile.avatar}}" alt="">
+      <h2>
+          {{userProfile.name}}
+      </h2>
+      <h4>{{userProfile.bio}}</h4>
+        <a href="{{userProfile.link}}" class="btn btn-primary">View My Profile</a>
+        <span class="badge">{{userProfile.repos}}</span> Repositories
+  </div>
+
+</div>
