@@ -2,12 +2,16 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../environments/environment' 
 import {Users} from './users'
+import {Repositories} from './repositories'
+import { reject, resolve } from 'q';
 @Injectable()
 export class UsersService {
   profile:Users
-
+  repo:Repositories
+  return:any
   constructor(private http:HttpClient) {
     this.profile = new Users("","","",0,"");
+    this.repo = new Repositories("","","",new Date());
    }
 
   userSearch(sTerm:string){
@@ -31,7 +35,7 @@ export class UsersService {
     });
     return promise;
   }
-
+ 
   repositories(sTerm){
     interface Repos{
       name:string;
@@ -39,6 +43,19 @@ export class UsersService {
       description:any;
       updated_at:Date
     }
-    let promise
+    let promise = new Promise((resolve,reject)=>{
+      this.http.get<Repos>(environment.url+sTerm+'/repos'+environment.KEY).toPromise().then(
+        res=>{
+          this.return = res;
+          
+          this.repo.name = res.name;
+          this.repo.description = res.description;
+          this.repo.link = res.html_url;
+          this.repo.updated = res.updated_at;
+          resolve();
+        }
+      );
+      });
+    return promise
   }
 }
