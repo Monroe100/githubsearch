@@ -20,7 +20,7 @@ export class UserProfileComponent implements OnInit {
   repository(sTerm){
     this.userService.repositories(sTerm)
   }
-  constructor(private userService:UsersService) { }
+  constructor(public userService:UsersService) { }
 
   ngOnInit() {
     this.userProfile = this.userService.profile;
